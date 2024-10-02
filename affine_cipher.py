@@ -20,3 +20,11 @@ def find_inverse(a):
         if (i * a) % len(alphabet) == 1: return i
         
     return -1
+
+def decrypt(x, a, c):
+
+    x+=(len(alphabet)-c%len(alphabet))
+
+    inverse = find_inverse(a)
+
+    x% = inverse
