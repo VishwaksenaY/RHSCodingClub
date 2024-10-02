@@ -23,8 +23,22 @@ def find_inverse(a):
 
 def decrypt(x, a, c):
 
-    x+=(len(alphabet)-c%len(alphabet))
+    x+=(len(alphabet)-c)%len(alphabet)
 
     inverse = find_inverse(a)
 
-    x% = inverse
+    x*=(inverse)
+    x%=len(alphabet)
+
+    return x
+
+def decrypt_text(text):
+    array = []
+    for chr in text:
+        index = decrypt(alphabet.index(chr), 5, 2)
+        newchar = alphabet[index]
+        array.append(newchar)
+
+    return "".join(array)
+
+print(decrypt_text(encrypt_text("hello")))
