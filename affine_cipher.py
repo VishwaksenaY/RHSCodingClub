@@ -35,6 +35,9 @@ def decrypt(x, a, c):
 def decrypt_text(text):
     array = []
     for chr in text:
+        if chr not in alphabet: 
+            array.append(chr)
+            continue
         index = decrypt(alphabet.index(chr), 5, 2)
         newchar = alphabet[index]
         array.append(newchar)
