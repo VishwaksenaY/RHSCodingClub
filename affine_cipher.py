@@ -1,5 +1,5 @@
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-plaintext = "hello"
+plaintext = "hello there"
 
 def encrypt(x, a, c):
     return (a*x + c) % (len(alphabet))
