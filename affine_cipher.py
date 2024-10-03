@@ -7,6 +7,9 @@ def encrypt(x, a, c):
 def encrypt_text(text):
     array = []
     for chr in text:
+        if chr not in alphabet: 
+            array.append(chr)
+            continue
         index = encrypt(alphabet.index(chr), 5, 2)
         newchar = alphabet[index]
         array.append(newchar)
