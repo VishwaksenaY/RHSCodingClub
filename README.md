@@ -1,4 +1,4 @@
 # RHS-Testing-Repository
-A testing repository for RHS students.
+Hi! I am Vishwaksena, and this is one of my Github Repositories.
 
-This is a readme!
+This is a README file!
